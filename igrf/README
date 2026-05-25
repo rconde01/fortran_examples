@@ -1,0 +1,20 @@
+Updated and corrected IGRF-13 coeffi ient files issued July 6, 2020 by Lutz Rastaetter:
+
+The file format is now the same as in the old (IGRF-10) in olf_fortran_code.
+The files are named with teh full 4-digit year to ensure that ciefficient files in teh 1900s are not named the same as in the 2000s. dgrf45.dat is now dgrf1945.dat, etc. so they are named different from dgrf2045.dat in the (not so far?) future.
+The updated subroutine feldg now uses the longer file names.
+
+Thanks to Tamir Zharaspayev who pointed out that I had posted the dgrf*.dat and igrf*.dat files in the wrong format (used by the International Reference Ionosphere's 2016 version).
+
+IGRF table with all years' coefficients:  https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html  
+
+GitHub repositries:
+
+Temir Zharaspayev, assistant at NRNU MEPhI (https://eng.mephi.ru/) 
+https://github.com/masscry/igrf-fortran.
+
+There is a Python wrapper of IGRF with Fortran sources (GETSHC subroutine) that uses a modified file format with a single column with only nonzero G and H coefficients extracted from the coefficient table from NOAA:
+
+https://github.com/rilma/pyIGRF
+
+
